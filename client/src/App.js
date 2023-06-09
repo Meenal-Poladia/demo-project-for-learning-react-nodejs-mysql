@@ -4,15 +4,32 @@ import {
     RouterProvider,
     Route,
 } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Single from "./pages/Single";
+import Write from "./pages/Write";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <div>This is home</div>,
+        element: <Home/>,
     },
     {
-        path: "/about",
-        element: <div>About</div>,
+        path: "/login",
+        element: <Login/>,
+    },
+    {
+        path: "/register",
+        element: <Register/>,
+    },
+    {
+        path: "/single",
+        element: <Single/>,
+    },
+    {
+        path: "/write",
+        element: <Write/>,
     },
 ]);
 
