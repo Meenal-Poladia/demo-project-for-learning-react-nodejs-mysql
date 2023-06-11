@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "react-quill": "^2.0.0",
     "react-router-dom": "^6.12.1"
   }
 }
