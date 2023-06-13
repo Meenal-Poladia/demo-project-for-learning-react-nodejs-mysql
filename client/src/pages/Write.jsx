@@ -6,7 +6,7 @@ const Write = () => {
     const [value, setValue] = useState("");
 
     return (
-        <div className='write'>
+        <div className='add'>
             <div className="content">
                 <input type="text" placeholder='Title'/>
                 <div className="editorContainer">
@@ -14,8 +14,48 @@ const Write = () => {
                 </div>
             </div>
             <div className="menu">
-                <div className="item">1</div>
-                <div className="item">2</div>
+                <div className="item">
+                    <h1>Publish</h1>
+                    <span>
+                        <b>Status: </b> Draft
+                    </span>
+                    <span>
+                        <b>Visibility: </b> Public
+                    </span>
+                    <input type="file" id='file' name='file'/>
+                    <label htmlFor="file">Upload Image</label>
+                    <div className='buttons'>
+                        <button>Save as a draft</button>
+                        <button>Update</button>
+                    </div>
+                </div> 
+                <div className="item">
+                    <h1>Category</h1>
+                    <div className="cat">
+                        <input type="radio" name='cat' value='art' id='art'/>
+                        <label htmlFor="art">ART</label>
+                    </div>
+                   <div className="cat">
+                       <input type="radio" name='cat' value='science' id='science'/>
+                       <label htmlFor="science">SCIENCE</label>
+                   </div>
+                   <div className="cat">
+                       <input type="radio" name='cat' value='technology' id='technology'/>
+                       <label htmlFor="technology">TECHNOLOGY</label>
+                   </div>
+                   <div className="cat">
+                       <input type="radio" name='cat' value='cinema' id='cinema'/>
+                       <label htmlFor="cinema">CINEMA</label>
+                   </div>
+                    <div className="cat">
+                        <input type="radio" name='cat' value='design' id='design'/>
+                        <label htmlFor="design">DESIGN</label>
+                    </div>
+                   <div className="cat">
+                       <input type="radio" name='cat' value='food' id='food'/>
+                       <label htmlFor="food">FOOD</label>
+                   </div>
+                </div>
             </div>
         </div>
     );
