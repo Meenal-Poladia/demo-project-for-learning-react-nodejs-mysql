@@ -1,6 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {useLocation} from "react-router-dom";
+import axios from "axios";
 
-const Menu = () => {
+const Menu = ({cat}) => {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await axios.get(`/posts/?cat=${cat}`);
+                setPosts(res.data);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        fetchData();
+    }, [cat]);
+    /*
     const posts = [
         {
             id: 1,
@@ -27,6 +43,7 @@ const Menu = () => {
             img: "https://images.pexels.com/photos/6157049/pexels-photo-6157049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         },
     ];
+     */
     return (
         <div className='menu'>
             <h1>Other posts you may like</h1>
