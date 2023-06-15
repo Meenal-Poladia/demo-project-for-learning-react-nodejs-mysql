@@ -22,7 +22,7 @@ const Write = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        upload();
+        const imageUrl = upload();
     };
 
     return (
