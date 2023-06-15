@@ -44,7 +44,7 @@ const Single = () => {
             <div className="content">
                 <img src="https://images.pexels.com/photos/14245014/pexels-photo-14245014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
                 <div className="user">
-                    <img src={post?.userImage} alt=""/>
+                    <img src={`../upload${post?.userImage}`} alt=""/>
                     <div className="info">
                         <span>{post.username}</span>
                         <p>Posted {moment(post.date).fromNow()}</p>
